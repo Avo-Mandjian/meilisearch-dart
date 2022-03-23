@@ -13,7 +13,7 @@ class TaskImpl implements TaskInfo {
     MeiliSearchIndexImpl index,
     Map<String, dynamic> map,
   ) =>
-      TaskImpl(index, map['uid'] as int);
+      TaskImpl(index, map['uid'] ?? map['updateId'] as int);
 
   @override
   Future<Task> getStatus() async {
