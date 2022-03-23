@@ -8,7 +8,7 @@ class HttpRequestImpl implements HttpRequest {
       : dio = Dio(BaseOptions(
           baseUrl: serverUrl,
           headers: <String, dynamic>{
-            if (apiKey != null) 'Authorization': 'Bearer ${apiKey}',
+            if (apiKey != null) 'X-MEILI-API-KEY': '${apiKey}',
             'Content-Type': 'application/json',
             'User-Agent': Version.qualifiedVersion,
           },
